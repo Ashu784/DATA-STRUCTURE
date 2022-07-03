@@ -9,16 +9,17 @@ int main()
  while(expression[i]!= '\0')
     {
 
-     if(expression[i]=='(')
+     if(expression[i]=='(' || expression[i]=='{' || expression[i]=='[')
         {
             x++;
         }
 
-     else if(expression[i]==')')
+     else if(expression[i]==')' || expression[i]=='}' || expression[i]==']')
         {
             x--;
-            if(x<0)
-            break;
+            if(x<0)            break;
+
+
         }
     i++;
     }
@@ -33,4 +34,4 @@ int main()
         printf("Expression is unbalanced");
     }
     return 0;
-}
+    }
